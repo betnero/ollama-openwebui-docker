@@ -15,3 +15,14 @@ This repository contains a Docker Compose setup to run:
 git clone https://github.com/yourusername/ollama-openwebui.git
 cd ollama-openwebui
 docker-compose up -d
+
+
+🔌 Ports
+Ollama runs on host port: 11434
+Open WebUI runs on host port: 1234
+
+📂 Volumes
+Ollama data: ./data/ollama
+Open WebUI data: ./data/openwebui
+
+
