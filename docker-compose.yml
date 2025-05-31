@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    network_mode: host       # <--- This line makes it use host network
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    network_mode: host       # <--- Same here
+    environment:
+      - OLLAMA_BASE_URL=http://127.0.0.1:11434
+      - PORT=1234            # <-- Custom port exposed for OpenWebUI
+    volumes:
+      - openwebui_data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  openwebui_data:
