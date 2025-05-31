@@ -12,7 +12,7 @@ This repository contains a Docker Compose setup to run:
 ## 📦 Getting Started
 
 ```bash
-git clone https://github.com/betnero/ollama-openwebui.git
+git clone https://github.com/betnero/ollama-openwebui-docker.git
 docker-compose up -d
 
 
