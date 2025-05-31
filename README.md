@@ -24,4 +24,6 @@ Open WebUI runs on host port: 1234
 Ollama data: ./data/ollama
 Open WebUI data: ./data/openwebui
 
-
+Launch
+OpenWebUI available at:
+http://localhost:1234/
